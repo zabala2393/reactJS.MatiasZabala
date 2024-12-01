@@ -1,25 +1,24 @@
 
-function ButtonNav ({label,bgc,handleClick}) {
+function ButtonNav({ label, handleClick }) {
 
     return (
 
-            <button           
+        <button
+
+            style={{ backgroundColor: 'limegreen'}}
+            onClick={handleClick}
             
-            style = {{backgroundColor: bgc}}
-            onClick ={handleClick}>
-            
-            
+            >
+
+
+
             {label}
-            
-            
-            
-            </button>
-
-
-)
 
 
 
+        </button>
+
+    )
 }
 
 export default ButtonNav
