@@ -8,12 +8,12 @@ function Navbar() {
         <div
 
             style={{ backgroundColor: 'lightgreen' }}
-            class={'navbar-nav me-auto mb-2 lg-0 container-fluid'}>
+            className={'navbar-nav me-auto mb-2 lg-0 container-fluid'}>
 
-            <div class={'row'}>
+            <div className={'row'}>
 
 
-                <div class={'nav-item productos'}>
+                <ul className={'nav-item productos'}>
 
 
                     <ButtonNav label='Remeras'
@@ -36,22 +36,16 @@ function Navbar() {
 
                     />
 
-                    <ButtonNav label='Buzos'
+                </ul>
 
-                        handleClick={{}}
-
-                    />
-
-                </div>
-
-                <div class={'nav-item logo'}>
+                <div className={'nav-item logo'}>
 
                     <h1>Tienda de ropa</h1>
 
                 </div>                
 
 
-                <div class={'nav-item carrito'}>
+                <div className={'nav-item carrito'}>
 
                     <CartWidget></CartWidget>
 

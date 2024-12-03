@@ -6,6 +6,7 @@ function ButtonNav({ label, handleClick }) {
         <button        
             style={{ backgroundColor: 'lightgreen'}}
             onClick={handleClick}
+            ref={{}}
         >
             {label}
 
