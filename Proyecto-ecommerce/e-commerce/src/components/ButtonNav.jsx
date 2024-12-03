@@ -3,21 +3,13 @@ function ButtonNav({ label, handleClick }) {
 
     return (
 
-        <button
-
-            style={{ backgroundColor: 'limegreen'}}
+        <button        
+            style={{ backgroundColor: 'lightgreen'}}
             onClick={handleClick}
-            
-            >
-
-
-
+        >
             {label}
 
-
-
         </button>
-
     )
 }
 

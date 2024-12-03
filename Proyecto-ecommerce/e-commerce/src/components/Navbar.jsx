@@ -1,40 +1,64 @@
 import ButtonNav from "./ButtonNav"
 import CartWidget from "./CartWidget"
 
-
 function Navbar() {
 
     return (
 
-        <div>
+        <div
 
-            <ButtonNav label='Remeras'
+            style={{ backgroundColor: 'lightgreen' }}
+            class={'navbar-nav me-auto mb-2 lg-0 container-fluid'}>
 
-                
-                handleClick={{}}
-            />
+            <div class={'row'}>
 
-            <ButtonNav label='Pantalones'
 
-                
-                handleClick={{}}
+                <div class={'nav-item productos'}>
 
-            />
 
-            <ButtonNav label='Zapatillas'
+                    <ButtonNav label='Remeras'
 
-               
-                handleClick={{}}
 
-            />
+                        handleClick={{}}
+                    />
 
-            <ButtonNav label='Buzos'
+                    <ButtonNav label='Pantalones'
 
-                handleClick={{}}
 
-            />
+                        handleClick={{}}
 
-            <CartWidget></CartWidget>
+                    />
+
+                    <ButtonNav label='Zapatillas'
+
+
+                        handleClick={{}}
+
+                    />
+
+                    <ButtonNav label='Buzos'
+
+                        handleClick={{}}
+
+                    />
+
+                </div>
+
+                <div class={'nav-item logo'}>
+
+                    <h1>Tienda de ropa</h1>
+
+                </div>                
+
+
+                <div class={'nav-item carrito'}>
+
+                    <CartWidget></CartWidget>
+
+                </div>
+
+
+            </div>
 
         </div>
     )
