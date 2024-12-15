@@ -13,7 +13,7 @@ function Navbar() {
             <div className={'row'}>
 
 
-                <ul className={'nav-item productos'}>
+                <div className={'nav-item productos'}>
 
 
                     <ButtonNav label='Remeras'
@@ -36,7 +36,7 @@ function Navbar() {
 
                     />
 
-                </ul>
+                </div>
 
                 <div className={'nav-item logo'}>
 

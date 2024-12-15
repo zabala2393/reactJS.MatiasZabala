@@ -1,6 +1,6 @@
 #root {
   min-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem;
   text-align: center;
 }
@@ -12,10 +12,10 @@ h1 {
 
 header div {
 
-  display: block;
+
   box-sizing: border-box;
   text-align: center;
-  unicode-bidi: isolate;
+
 
 }
 
@@ -31,8 +31,6 @@ header div {
 .logo {
 
   width: 40%;
-  padding: 10;
-  margin: 10;
 
 }
 
