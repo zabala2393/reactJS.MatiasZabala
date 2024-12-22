@@ -1,46 +1,25 @@
 import { useState, useEffect } from 'react'
-import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import ItemList from './ItemList'
+import {useParams} from 'react-router'
 
-function ItemListContainer({ label, bgc }) {
+function ItemListContainer({}) {    
 
     const [items, setItems] = useState([])
+    const {id} = useParams()
+    
+    useEffect(() => {  
+        
+        const urlBase = 'https://dummyjson.com/products'
+        const urlByCategory = `https://dummyjson.com/products/category/${id}`
 
-    useEffect(() => {
-        fetch('https://dummyjson.com/products')
-            .then(res => res.json())
-            .then(res => setItems(res.products))
+            fetch (id ? urlByCategory : urlBase)
+            .then (res => res.json())
+            .then (res => setItems(res.products))
+
     }, [])
 
     return (
-        <Container
-            style={{ backgroundColor: bgc }}
-
-            placeholder={'Bienvenido a la tienda!!'} >
-            {label = 'Bienvenidos a la tienda!!!'}
-
-            <Row>
-                {items.map(item => (
-                    <Col key={item.id}  >
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={item.thumbnail} />
-                            <Card.Body>
-                                <Card.Title>{item.title}</Card.Title>
-                                <Card.Text>
-                                    {item.description}
-                                </Card.Text>
-                                <Card.Text>
-                                    ${item.price}
-                                </Card.Text>
-                                <Button variant="primary">Detalles</Button>
-                            </Card.Body>
-                        </Card></Col>))
-                }
-            </Row>
-        </Container>
+        <ItemList items={items}></ItemList>
     )
 
 }

@@ -1,5 +1,6 @@
 import ButtonNav from "./ButtonNav"
 import CartWidget from "./CartWidget"
+import {Link, NavLink} from 'react-router'
 
 function Navbar() {
 
@@ -20,7 +21,9 @@ function Navbar() {
 
 
                         handleClick={{}}
-                    />
+                        as={Link}
+                        
+                    > <Link to='/Remeras'/> </ButtonNav>
 
                     <ButtonNav label='Pantalones'
 
