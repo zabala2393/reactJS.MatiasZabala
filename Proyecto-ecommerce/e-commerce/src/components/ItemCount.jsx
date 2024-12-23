@@ -1,27 +1,28 @@
-import {useState, useEffect} from 'react'
+import { useState } from 'react'
 
-function ItemCount () {
+function ItemCount() {
 
-    const [count, setCount] = useState (0)
+    const [count, setCount] = useState(0)
 
-    useEffect (()=>{
+    const handleAdd = () => {
 
-    } )
-
-    return () => {
+        setCount(count + 1)
 
     }
 
-    const handleAdd = () => {}
+    const handleSubtract = () => {
 
-    const handleSubtract = () => {}
+        setCount(count - 1)
+
+    }
 
     return (
 
         <div>
-            <p></p>
-            <button></button>
-            <button></button>
+            <p style={{ border: 'solid 1 white' }}>{count}</p>
+            <button style={{ backgroundColor: 'red' }} onClick={handleSubtract}>-</button>
+            <button style={{ backgroundColor: 'green' }} onClick={handleAdd}>+</button>
+            <button style={{backgroundColor: 'beige'}}>Agregar al carrito</button>
         </div>
 
     )

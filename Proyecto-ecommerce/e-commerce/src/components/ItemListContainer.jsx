@@ -6,7 +6,7 @@ function ItemListContainer({}) {
 
     const [items, setItems] = useState([])
     const {id} = useParams()
-    
+     
     useEffect(() => {  
         
         const urlBase = 'https://dummyjson.com/products'

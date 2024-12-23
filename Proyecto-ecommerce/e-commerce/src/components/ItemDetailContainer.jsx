@@ -10,13 +10,13 @@ function ItemDetailContainer () {
 
     useEffect (() => {
         fetch (`https://dummyjson.com/products/${id}`)
-        .then (res => res.json)
+        .then (res => res.json())
         .then (res=> setItem(res))
     }, [id] )
 
     return (
 
-        <ItemDetail item={item}/>
+        <div><ItemDetail item={item}/></div>
         
     )
 }
