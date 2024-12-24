@@ -21,7 +21,7 @@ function ItemList({ items, label, bgc }) {
             {items.map(item => (
                 <Col key={item.id}  >
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={item.thumbnail} />
+                        <Card.Img variant="top" src={item.images} />
                         <Card.Body>
                             <Card.Title>{item.title}</Card.Title>
                             <Card.Text>
@@ -30,7 +30,7 @@ function ItemList({ items, label, bgc }) {
                             <Card.Text>
                                 ${item.price}
                             </Card.Text>
-                            <Button variant="primary" onClick={()=>navigate(`/item/${item.id}`)} >Detalles</Button>
+                            <Button variant="primary" onClick={()=>navigate(`/item/${item.name}`)} >Detalles</Button>
                         </Card.Body>
                     </Card></Col>))
             }

@@ -10,11 +10,13 @@ function NavBar() {
 
         <Navbar>
             <Container>
-                <Navbar.Brand href='/'>Tienda de ropa</Navbar.Brand>
-                <Nav className= 'me-auto lg-0 logo'></Nav>
-                <Nav.Link as={Link} to='/remeras'>Remeras</Nav.Link>
-                <Nav.Link as={Link} to='/pantalones'>Pantalones</Nav.Link>
-                <Nav.Link as={Link} to='/zapatillas'>Zapatillas</Nav.Link>
+                <Navbar.Brand href='/'>Free-shop New York</Navbar.Brand>
+                <Nav className= 'me-auto lg-0 '></Nav>
+                <Nav.Link as={Link} to='/clothes'>Clothes</Nav.Link>
+                <Nav.Link as={Link} to='/electronics'>Electronics</Nav.Link>
+                <Nav.Link as={Link} to='/furniture'>Furniture</Nav.Link>
+                <Nav.Link as={Link} to='/shoes'>Shoes</Nav.Link>
+                <Nav.Link as={Link} to='/miscellaneous'>Miscellaneous</Nav.Link>
             </Container>
          
         </Navbar>

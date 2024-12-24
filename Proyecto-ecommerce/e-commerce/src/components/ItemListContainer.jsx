@@ -8,15 +8,19 @@ function ItemListContainer({}) {
     const {id} = useParams()
      
     useEffect(() => {  
+      
         
-        const urlBase = 'https://dummyjson.com/products'
-        const urlByCategory = `https://dummyjson.com/products/category/${id}`
+        const urlBase = 'https://api.escuelajs.co/api/v1/products'
+        const urlByCategory = `https://api.escuelajs.co/api/v1/categories/${id}/products`
 
             fetch (id ? urlByCategory : urlBase)
             .then (res => res.json())
-            .then (res => setItems(res.products))
+            .then (res => setItems(res))
+            .catch ((err) => {
+                console.log(err.message)
+            })
 
-    }, [])
+    }, [id])
 
     return (
         <ItemList items={items}></ItemList>

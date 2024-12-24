@@ -22,9 +22,9 @@ function App() {
           <Routes>
 
             <Route path='/' element={<ItemListContainer />} ></Route>
-            <Route path='/category/:categoryId' element={<ItemListContainer/>}></Route>
+            <Route path='/:id/categories' element={<ItemListContainer/>}></Route>
             <Route path='/item/:id'element={<ItemDetailContainer/>} ></Route>
-            <Route path='*' element={<h1>404</h1>}></Route>
+            <Route path='*' element={<h1>No se encontro esta pagina, intente volver a la pagina inicial</h1>}></Route>
 
           </Routes>
 

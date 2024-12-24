@@ -6,10 +6,10 @@ import ItemDetail from './ItemDetail'
 function ItemDetailContainer () {
 
     const [item, setItem] = useState()
-    const {id} = useParams()
+    const { id } = useParams()
 
     useEffect (() => {
-        fetch (`https://dummyjson.com/products/${id}`)
+        fetch (`https://api.escuelajs.co/api/v1/products/${id}`)
         .then (res => res.json())
         .then (res=> setItem(res))
     }, [id] )
