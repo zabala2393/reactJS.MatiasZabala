@@ -30,7 +30,7 @@ function ItemList({ items, label, bgc }) {
                             <Card.Text>
                                 ${item.price}
                             </Card.Text>
-                            <Button variant="primary" onClick={()=>navigate(`/item/${item.name}`)} >Detalles</Button>
+                            <Button variant="primary" onClick={()=>navigate(`/products/${item.id}`)} >Detalles</Button>
                         </Card.Body>
                     </Card></Col>))
             }
