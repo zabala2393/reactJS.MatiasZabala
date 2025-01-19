@@ -1,8 +1,17 @@
-import { useState } from 'react'
+import { useState, useContext} from 'react'
+import {CartContext} from '../context/CartContext'
 
-function ItemCount() {
+
+function ItemCount({item}) {
 
     const [count, setCount] = useState(0)
+    const { addToCart } = useContext(CartContext)
+
+    const handleAddToCart = () => {
+
+        addToCart({...item, quantity: count})
+
+    }
 
     const handleAdd = () => {
 
@@ -22,7 +31,7 @@ function ItemCount() {
             <p style={{ border: 'solid 1 white' }}>{count}</p>
             <button style={{ backgroundColor: 'red' }} onClick={handleSubtract}>-</button>
             <button style={{ backgroundColor: 'green' }} onClick={handleAdd}>+</button>
-            <button style={{backgroundColor: 'beige'}}>Agregar al carrito</button>
+            <button style={{backgroundColor: 'beige'}} onClick={handleAddToCart()}>Agregar al carrito</button>
         </div>
 
     )
