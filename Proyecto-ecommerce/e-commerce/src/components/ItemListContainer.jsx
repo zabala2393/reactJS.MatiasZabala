@@ -13,7 +13,7 @@ function ItemListContainer() {
      
     useEffect(() => {      
         
-            if(id) {
+        if(id) {
             getProductsByCategory(id)
             .then (res=> setItems(res))
         } else { 
@@ -27,7 +27,4 @@ function ItemListContainer() {
     )
 
 }
-
-
-
 export default ItemListContainer

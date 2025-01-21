@@ -19,15 +19,15 @@ querySnapshot.forEach((doc) => {
 
 export const getProductsByCategory = async (category) => {
 
-    const q = query(collection(db, 'products'), where ("category", "=" , category))
+    const q = query(collection(db, "products"), where ("category", '==' , category))
     const querySnapshot = await getDocs(q)
-    const products=[]
+    const productsByCategory=[]
 
     querySnapshot.forEach((doc)=>{
-        products.push(doc.data())
+        productsByCategory.push(doc.data())
     })
 
-    return products
+    return productsByCategory
 
 }
 
@@ -47,11 +47,18 @@ export const getProduct = async (id) => {
 
 
 export const createOrder = async () => {
+    
 try {
     const docRef = await addDoc(collection(db, 'orders'), order)
 
 } catch (e) {
     console.error('Error al realizar la orden')
+}
+
+return {
+
+    
+
 }
 
 }

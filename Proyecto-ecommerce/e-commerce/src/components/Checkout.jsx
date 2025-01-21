@@ -5,7 +5,7 @@ import { createOrder } from "../firebase/db";
 import { serverTimestamp } from "firebase/firestore";
 
 
-function Checkout () {
+export function Checkout () {
 
     const {cart, getTotal} = useCart()
 

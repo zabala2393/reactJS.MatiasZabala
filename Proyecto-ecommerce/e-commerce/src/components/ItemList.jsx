@@ -5,8 +5,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import {useNavigate} from 'react-router'
 
-
-
 function ItemList({ items, label, bgc }) {
 
     const navigate = useNavigate()

@@ -7,9 +7,9 @@ function ItemCount({item}) {
     const [count, setCount] = useState(0)
     const { addToCart } = useContext(CartContext)
 
-    const handleAddToCart = () => {
+    const handleAddToCart  = () => {
 
-        addToCart({...item, quantity: count})
+       addToCart({...item, quantity: count})
 
     }
 
@@ -31,7 +31,7 @@ function ItemCount({item}) {
             <p style={{ border: 'solid 1 white' }}>{count}</p>
             <button style={{ backgroundColor: 'red' }} onClick={handleSubtract}>-</button>
             <button style={{ backgroundColor: 'green' }} onClick={handleAdd}>+</button>
-            <button style={{backgroundColor: 'beige'}} onClick={handleAddToCart()}>Agregar al carrito</button>
+            <button style={{backgroundColor: 'beige'}} onClick={handleAddToCart}>Agregar al carrito</button>
         </div>
 
     )

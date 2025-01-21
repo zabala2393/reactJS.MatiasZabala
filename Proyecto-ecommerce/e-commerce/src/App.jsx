@@ -17,7 +17,7 @@ function App() {
           <Routes>
 
             <Route path='/' element={<ItemListContainer />} ></Route>
-            <Route path='/category/:products' element={<ItemListContainer/>}></Route>
+            <Route path='/category/:category' element={<ItemListContainer/>}></Route>
             <Route path='/products/:id'element={<ItemDetailContainer/>} ></Route>
             <Route path='*' element={<h1>No se encontro esta pagina, intente volver a la pagina inicial</h1>}></Route>
             <Route path='/cart' element={<Cart/>}></Route>

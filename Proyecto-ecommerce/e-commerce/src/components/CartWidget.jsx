@@ -1,11 +1,11 @@
-import * as React from 'react';
-import Badge from '@mui/material/Badge';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
-import { Link } from 'react-router';
+import * as React from 'react'
+import Badge from '@mui/material/Badge'
+import { styled } from '@mui/material/styles'
+import IconButton from '@mui/material/IconButton'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -19,9 +19,10 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 export default function CartWidget() {
 
     const {getQty} = useContext(CartContext)
+
     
     return (
-        <IconButton as={Link} to="/cart" aria-label="cart" >
+        <IconButton aria-label="cart" >
             <StyledBadge badgeContent={getQty()} color="secondary">
                 <ShoppingCartIcon />
             </StyledBadge>
