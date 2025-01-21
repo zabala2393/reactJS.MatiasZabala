@@ -10,17 +10,11 @@ function Cart () {
 
         <h2>No hay productos aun en el carrito</h2>
 
-    } return  (
-        
-
-        <div>
-
-            <CartList items= {cart}/>
+    } return  (            
+            <CartList items= {cart}>
             <p>Total : ${getTotal()}</p>
             <Button as={Link} to='/checkout'>Finalizar compra</Button>
-
-        </div>
-
+            </CartList>
     )
 }
 export default Cart

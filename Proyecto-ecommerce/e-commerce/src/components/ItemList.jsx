@@ -9,10 +9,7 @@ function ItemList({ items, label, bgc }) {
 
     const navigate = useNavigate()
 
-    return (<Container
-        style={{ backgroundColor: bgc }}
-
-        placeholder={'Bienvenido a la tienda!!'} >
+    return (<Container style={{ backgroundColor: bgc }}>
         {label = 'Bienvenidos a la tienda!!!'}
 
         <Row>
