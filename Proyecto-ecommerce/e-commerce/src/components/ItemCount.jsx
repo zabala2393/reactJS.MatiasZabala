@@ -9,8 +9,9 @@ function ItemCount({item}) {
 
     const handleAddToCart  = () => {
 
-       addToCart({...item, quantity: count})
-
+        addToCart({...item, quantity: count})
+                      
+        
     }
 
     const handleAdd = () => {
@@ -21,7 +22,13 @@ function ItemCount({item}) {
 
     const handleSubtract = () => {
 
+        if (count >'0') 
+            
+            return (
+
         setCount(count - 1)
+
+    )
 
     }
 

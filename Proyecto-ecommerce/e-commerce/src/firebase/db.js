@@ -46,19 +46,17 @@ export const getProduct = async (id) => {
 }
 
 
-export const createOrder = async () => {
+export const createOrder = async (order) => {
     
 try {
     const docRef = await addDoc(collection(db, 'orders'), order)
+    console.log("Orden realizada con numero de orden:", docRef.id)
+    return docRef.id
 
 } catch (e) {
     console.error('Error al realizar la orden')
 }
 
-return {
-
-    
-
-}
+  
 
 }

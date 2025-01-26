@@ -1,3 +1,4 @@
+import ItemCount from "../components/ItemCount";
 import { CartContext } from "./CartContext";
 import { useState } from "react";
 
@@ -8,7 +9,8 @@ export default function CartProvider ({children}) {
     const addToCart = item => {
         
         const isInCart = cart.some(prod=>prod.id === item.id)
-        if (!isInCart) return setCart([...cart, item])          
+        if (!isInCart) return setCart([...cart, item])    
+            
             
     }
     

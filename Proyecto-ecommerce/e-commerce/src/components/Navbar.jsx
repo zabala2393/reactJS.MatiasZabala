@@ -1,6 +1,6 @@
 
 import CartWidget from "./CartWidget"
-import { Link, Navigate, NavLink } from 'react-router'
+import { NavLink } from 'react-router'
 import { Container, Nav, Navbar } from "react-bootstrap"
 
 
