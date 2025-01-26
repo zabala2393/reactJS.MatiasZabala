@@ -14,14 +14,12 @@ function CartList(item) {
 
     return (
 
-        <ListGroup>{cart.map(item =>
+        <ListGroup >{cart.map(item =>
         (<ListGroupItem key={item.id}>
             {item.name}x{item.quantity}
             ${item.price}
             <Button onClick={handleSubtract}>-</Button>
             <Button onClick={handleAdd}>+</Button>
-            
-
         </ListGroupItem>))}
         </ListGroup>
 
