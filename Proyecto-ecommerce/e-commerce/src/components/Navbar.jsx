@@ -16,8 +16,7 @@ function NavBar() {
                 <Nav.Link as={NavLink} to='/category/shoes'>Shoes</Nav.Link>
                 <Nav.Link as={NavLink} to='/category/makeup'>Makeup</Nav.Link>                
                 <Nav.Link  as={NavLink} to='/cart'><CartWidget></CartWidget></Nav.Link>              
-            </Container>
-         
+            </Container>         
         </Navbar>
     )
 }

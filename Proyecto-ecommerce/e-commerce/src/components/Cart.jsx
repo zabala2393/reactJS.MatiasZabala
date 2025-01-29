@@ -11,14 +11,14 @@ function Cart() {
 
         return (
 
-        <Container>    
-        <h2>No hay productos aun en el carrito</h2>
+            <Container>
+                <h2>No hay productos aun en el carrito</h2>
 
-        <Button as={Link} to='/'>Ver catalogo de productos</Button>
+                <Button as={Link} to='/'>Ver catalogo de productos</Button>
 
-        </Container>
+            </Container>
 
-    )
+        )
 
     } return (
 

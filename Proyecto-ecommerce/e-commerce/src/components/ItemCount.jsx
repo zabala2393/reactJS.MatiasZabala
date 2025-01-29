@@ -1,17 +1,22 @@
-import { useState, useContext} from 'react'
-import {CartContext} from '../context/CartContext'
+import { useState, useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
 
-function ItemCount({item}) {
+export function ItemCount({ item }) {
 
     const [count, setCount] = useState(0)
-    const { addToCart } = useContext(CartContext)
+    const { addToCart, cart } = useContext(CartContext)
 
-    const handleAddToCart  = () => {
+    const handleAddToCart = () => {
 
-        addToCart({...item, quantity: count})
-                      
-        
+        const isInCart = cart.some(prod => prod.id === item.id)
+
+        if (isInCart) { addToCart({ quantity: count }) } else {
+
+            addToCart({ ...item, quantity: count })
+        }
+
+
     }
 
     const handleAdd = () => {
@@ -22,13 +27,13 @@ function ItemCount({item}) {
 
     const handleSubtract = () => {
 
-        if (count >'0') 
-            
+        if (count > '0')
+
             return (
 
-        setCount(count - 1)
+                setCount(count - 1)
 
-    )
+            )
 
     }
 
@@ -36,9 +41,9 @@ function ItemCount({item}) {
 
         <div>
             <p style={{ border: 'solid 1 white' }}>{count}</p>
-            <button style={{ backgroundColor: 'red' }} onClick={handleSubtract}>-</button>
-            <button style={{ backgroundColor: 'green' }} onClick={handleAdd}>+</button>
-            <button style={{backgroundColor: 'beige'}} onClick={handleAddToCart}>Agregar al carrito</button>
+            <button style={{ backgroundColor: 'lightblue' }} onClick={handleSubtract}>-</button>
+            <button style={{ backgroundColor: 'lightgreen' }} onClick={handleAdd}>+</button>
+            <button style={{ backgroundColor: 'beige' }} onClick={handleAddToCart}>Agregar al carrito</button>
         </div>
 
     )
