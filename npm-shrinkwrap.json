@@ -1,9 +1,10 @@
 {
-  "name": "Preentrega-1",
+  "name": "Reactjs-entregafinal",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
+      "name": "Reactjs-entregafinal",
       "dependencies": {
         "@emotion/react": "^11.13.5",
         "@emotion/styled": "^11.13.5",
